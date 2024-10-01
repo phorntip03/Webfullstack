@@ -29,7 +29,13 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+    //เส้นทางไปหน้า  dashboard
     Route::get('/dashboard', function () {
         return view('backend');
     })->name('dashboard');
+
+    //เส้นทางไปหน้า  profile
+    Route::get('/profile', function () {
+        return view('profile');
+    })->name('profile');
 });
