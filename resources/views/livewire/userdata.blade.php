@@ -102,7 +102,10 @@
               </tbody>
           </table>
         </div>
+        <div class="d-flex justify-content-center">
+           {{$data->links()}}
         <!-- /.card-body -->
+        </div>
       </div>
       <!-- /.card -->
 
