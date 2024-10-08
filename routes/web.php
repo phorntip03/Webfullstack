@@ -38,4 +38,9 @@ Route::middleware([
     Route::get('/profile', function () {
         return view('profile');
     })->name('profile');
+
+    //เส้นทางไปหน้า  User
+    Route::get('/userdata', function () {
+        return view('userdata');
+    })->name('userdata');
 });
