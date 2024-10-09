@@ -47,4 +47,8 @@ Route::middleware([
     Route::get('/adduser', function () {
         return view('adduser');
     })->name('adduser');
+
+    Route::get('/edituser/{id}', function ($id) {
+        return view('edituser',compact('id'));
+    })->name('edituser');
 });
