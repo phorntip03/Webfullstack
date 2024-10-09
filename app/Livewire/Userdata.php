@@ -17,4 +17,17 @@ class Userdata extends Component
          //withcompact คือทุกครั้งที่มีการ rander ใหม่ ให้ส่งตัวแปร data ไปที่หน้า view ด้วย
         return view('livewire.userdata')->with(compact('data'));
     }
+   
+
+    public function delete($id)
+    { 
+        try{
+         User::find($id)->delete();
+      
+    }catch(Exception $e){
+        dd($e);
+
+    }
+   }
+
 }

@@ -20,6 +20,13 @@
 
     <!-- Main content -->
     <section class="content">
+       <div>
+       <a class="btn btn-primary btn-sm" href="{{route('adduser')}}">
+          <i class="fas fa-folder">
+            </i>
+             Create User
+            </a>
+      </div>
 
       <!-- Default box -->
       <div class="card">
@@ -91,7 +98,7 @@
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" wire:click ='delete({{$item->id}})' href="#">
                               <i class="fas fa-trash">
                               </i>
                               Delete
